@@ -1,0 +1,375 @@
+:root {
+  --primary: #ffae00;
+  --dark: #141414;
+  --light: #fff;
+  --bg: #ebebeb;
+}
+
+* {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+.body-home {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.body-iframe {
+  overflow-x: hidden;
+  padding: 1rem;
+}
+
+/* Home CSS start */
+.home-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+/* sidebar start*/
+.sidebar {
+  position: relative;
+  display: block;
+  background-color: var(--dark);
+  width: 20%;
+  height: 100%;
+  z-index: 9999;
+}
+
+/* sidebar head */
+.sidebar .sidebar-head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  background-color: #2c2c2c;
+  padding: 0 2rem;
+  gap: 1rem;
+}
+
+.profil-head {
+  position: relative;
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+
+.profil-head #profil-user {
+  width: 100%;
+}
+
+.username-head {
+  position: relative;
+  width: 75%;
+  display: flex;
+  align-items: center;
+}
+
+.username-head #username-profil {
+  width: 100%;
+  line-height: 1.2rem;
+  color: var(--light);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  overflow-wrap: break-word;
+}
+
+/* sidebar body */
+.sidebar .sidebar-body {
+  position: relative;
+}
+
+.icon-menu {
+  width: 30px;
+  height: 30px;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: block;
+}
+
+.btns {
+  color: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.8rem;
+  border-bottom: 1px solid #2b2b2b;
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.btns:hover {
+  color: var(--dark);
+  font-weight: 600;
+  background-color: var(--primary);
+  transition: 0.1s linear;
+}
+
+.btns.active {
+  color: var(--dark);
+  font-weight: 600;
+  background-color: var(--primary);
+}
+
+/* sidebar arrow */
+.drop-down {
+  margin-left: 0;
+  transform: rotate(-90deg);
+  visibility: hidden;
+}
+
+.drop-down.activeDropDown {
+  visibility: visible;
+  transition: 0.1s linear;
+}
+
+.drop-down.activeDropDown.show {
+  transform: rotate(0deg);
+  transition: 0.1s linear;
+}
+
+/* sidebar submenu */
+.subMenu {
+  padding: 0;
+  list-style-type: none;
+  background-color: #383838;
+  display: block;
+  height: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.subMenu.showMenu {
+  height: auto;
+  transform: scaleY(1);
+}
+
+.subMenu li {
+  display: flex;
+}
+
+.subMenu li a {
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  border-bottom: 1px solid #555555;
+}
+
+.subMenu li a:hover,
+.subMenu li a.activeSub {
+  font-weight: 600;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+/* info username */
+.box-info-user {
+  position: absolute;
+  top: 0.5rem;
+  left: 104%;
+  width: 15rem;
+  background-color: var(--light);
+  border-radius: 10px;
+  transition: 0.2s linear;
+  opacity: 0%;
+  visibility: hidden;
+}
+
+#profil-info {
+  position: relative;
+  left: 20%;
+  width: 60%;
+}
+
+.info-user {
+  width: 100%;
+  padding: 1rem 1.5rem;
+}
+
+.info-user h1 {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+  margin-bottom: 0.5rem;
+  overflow-wrap: break-word;
+}
+
+.info-user p {
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+}
+/* sidebar end*/
+
+/* Content start */
+.iframe-container {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+#iframe-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* Content end */
+/* Home CSS end */
+
+/* Dashboard CSS start */
+.dash-head h1 {
+  border-bottom: 2px solid #555555;
+}
+
+/* Income box */
+.box h3,
+.box p {
+  color: var(--light);
+}
+
+.income-container,
+.outcome-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.box {
+  position: relative;
+  width: 20rem;
+  margin-right: 2rem;
+  padding: 2rem 0rem 2rem 5.5rem;
+  border-radius: 15px;
+}
+
+.income {
+  box-shadow: 0px 0px 0px 0px #15ff00a2;
+  transition: 0.3s ease-in-out;
+  background-image: linear-gradient(to left, var(--dark) 95%, #12d300 95%);
+}
+
+.outcome {
+  box-shadow: 0px 0px 0px 0px #ff0000a2;
+  transition: 0.3s ease-in-out;
+  background-image: linear-gradient(to left, var(--dark) 95%, #d30000 95%);
+}
+
+.income:hover {
+  box-shadow: 0px 0px 10px 5px #15ff00a2;
+  transition: 0.3s ease-in-out;
+}
+
+.outcome:hover {
+  box-shadow: 0px 0px 10px 5px #ff0000a2;
+  transition: 0.3s ease-in-out;
+}
+
+.income span {
+  color: #12d300;
+}
+
+.outcome span {
+  color: #d30000;
+}
+
+.income-icon,
+.outcome-icon {
+  position: absolute;
+  width: 30%;
+  height: 40%;
+  left: 5px;
+}
+
+/* Dash body */
+/* Chart */
+
+/* Dashboard CSS end */
+
+/* media */
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 70%;
+  }
+}
+/* ipad */
+@media (max-width: 758px) {
+  html {
+    font-size: 60%;
+  }
+
+  .icon-menu {
+    width: 16px;
+    height: 16px;
+  }
+
+  .profil-head {
+    width: 40%;
+  }
+
+  .username-head {
+    height: 60%;
+  }
+
+  .sidebar .sidebar-head {
+    height: 5%;
+  }
+}
+/* mobile */
+@media (max-width: 450px) {
+  html,
+  h3,
+  p {
+    font-size: 50%;
+  }
+
+  .sidebar {
+    width: 30%;
+    justify-content: space-between;
+  }
+
+  .btns {
+    justify-content: space-around;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .iframe-container,
+  .iframe-content {
+    width: 70%;
+  }
+
+  .box {
+    margin-right: 0.5rem;
+    padding: 1rem 0rem 1rem 1rem;
+    height: 9rem;
+    border-radius: 10px;
+  }
+
+  .income-icon,
+  .outcome-icon {
+    position: relative;
+    width: 30%;
+    height: 40%;
+    left: 20%;
+  }
+}
