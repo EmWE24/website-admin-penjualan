@@ -313,17 +313,8 @@ body {
     font-size: 70%;
   }
 
-  .btns {
-    font-size: 1rem;
-  }
-
-  .icon-menu {
-    width: 15px;
-    height: 15px;
-  }
-
   .sidebar .sidebar-head {
-    height: 5%;
+    height: 10%;
   }
 }
 /* ipad */
